@@ -6,6 +6,7 @@
             <HomeSwiper/>
             <HomeGoods/>
             <Brand/>
+            <HotCategory/>
           </scroller>
         </div>
         
@@ -17,14 +18,15 @@
   import HomeSwiper from './components/HomeSwiper/homeswiper'
   import HomeGoods from './components/HomeGoods/homegoods'
   import Brand from './components/Brand/brand'
-
+  import HotCategory  from './components/HotCategory/hotcategory'
   export default {
     name: 'home',
     components:{
       'HomeNav':HomeNav,
       'HomeSwiper':HomeSwiper,
       'HomeGoods':HomeGoods,
-      'Brand':Brand
+      'Brand':Brand,
+      'HotCategory':HotCategory
     }
   }
 </script>
