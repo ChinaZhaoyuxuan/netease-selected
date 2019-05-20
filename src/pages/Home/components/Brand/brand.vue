@@ -71,13 +71,13 @@
         background-repeat no-repeat
         background-size 100% 100%
         &:nth-of-type(1)
-          margin 20px 5px 5px 20px
+          margin 20px 5px 5px 30px
           background-image url("http://yanxuan.nosdn.127.net/74e2ea8f81004d0a60f90fc8e4649058.png")
         &:nth-of-type(2)
           margin 20px 0 5px 0
           background-image url("http://yanxuan.nosdn.127.net/c097be14110f769d58245cdad73e15c3.png")
         &:nth-of-type(3)
-          margin 0 5px 5px 20px
+          margin 0 5px 5px 30px
           background-image url("http://yanxuan.nosdn.127.net/66a23d776f41cba70d00803a5231124b.png")
         &:nth-of-type(4)
           margin-bottom 5px

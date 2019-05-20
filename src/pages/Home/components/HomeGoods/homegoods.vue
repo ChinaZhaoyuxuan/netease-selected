@@ -1,45 +1,9 @@
 <template>
   <div>
     <ul id="HomeGoodsUL">
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/c6fd8835a6400b7da7a016ad85506b69.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$0.0.0">
-        <span>新品首发</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/fede8b110c502ec5799702d5ec824792.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$1.0.0">
-        <span>居家生活</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/f90310e950469586307d8595d0ee9c81.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$2.0.0">
-        <span>服饰鞋包</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/6c3bd9d885c818b1f73e497335a68b47.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$4.0.0">
-        <span>美食酒水</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/559d2a240ec20b096590a902217009ff.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$5.0.0">
-        <span>个护清洁</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/559d2a240ec20b096590a902217009ff.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$5.0.0">
-        <span>母婴亲子</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/5c088559ebcc3f0ffcda663f04dfbeb2.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$6.0.0">
-        <span>运动旅行</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/fbca8e1f2948f0c09fc7672c2c125384.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$7.0.0">
-        <span>数码家电</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/f7281169d4e82d5d8d52aa1fec83fe01.png" data-reactid=".0.4.0.0.0.0.$0/=1$0.$8.0.0">
-        <span>全球特色</span>
-      </li>
-      <li>
-        <img class="img" src="https://yanxuan.nosdn.127.net/861a521a6f53e3399205f18daa23cddc.gif" data-reactid=".0.4.0.0.0.0.$0/=1$0.$9.0.0">
-        <span>超级会员</span>
+      <li v-for="(item,index) in navList" :key="index">
+        <img class="img" :src="item.picUrl">
+        <span>{{item.text}}</span>
       </li>
     </ul>
     <div id="NewPeople">
@@ -71,9 +35,14 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
   export default {
-    name: 'homegoods'
-    
+    name: 'homegoods',
+    computed: {
+      ...mapState({
+        navList: state => state.home.navList
+      })
+    }
   }
 </script>
 
@@ -116,7 +85,7 @@
         .newgift
           border-radius 5px
           float left
-          width 342px
+          width 310px
           height 434px
           margin-left 45px
           background #F9E9CF

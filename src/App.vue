@@ -1,7 +1,7 @@
 <template>
   <div>
-    <commonHeader/>
-    <commonFooter/>
+    <commonHeader v-show="$route.meta.showHeader"/>
+    <commonFooter v-show="$route.meta.showFooter"/>
     <router-view/>
   </div>
   

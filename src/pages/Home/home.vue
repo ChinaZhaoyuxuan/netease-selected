@@ -7,6 +7,9 @@
             <HomeGoods/>
             <Brand/>
             <HotCategory/>
+            <Popularity/>
+            <TimeTobuy/>
+            <NewShop/>
           </scroller>
         </div>
         
@@ -19,6 +22,9 @@
   import HomeGoods from './components/HomeGoods/homegoods'
   import Brand from './components/Brand/brand'
   import HotCategory  from './components/HotCategory/hotcategory'
+  import Popularity from './components/Popularity/popularity'
+  import TimeTobuy from './components/TimeTobuy/timetobuy'
+  import NewShop from './components/NewShop/newshop'
   export default {
     name: 'home',
     components:{
@@ -26,7 +32,13 @@
       'HomeSwiper':HomeSwiper,
       'HomeGoods':HomeGoods,
       'Brand':Brand,
-      'HotCategory':HotCategory
+      'HotCategory':HotCategory,
+      'Popularity':Popularity,
+      'TimeTobuy':TimeTobuy,
+      'NewShop':NewShop
+    },
+    mounted(){
+        this.$store.dispatch('gethomeData')
     }
   }
 </script>

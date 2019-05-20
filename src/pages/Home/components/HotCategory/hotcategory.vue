@@ -27,6 +27,40 @@
           style="display: inline;">
       </div>
     </div>
+    <ul id="homeLife">
+      <li>
+        <p>居家生活榜</p>
+        <img src="https://yanxuan.nosdn.127.net/c0b3d87a8066b33c68294ce60f8e1920.png?" alt="热销榜">
+      </li>
+      <li>
+        <p>服饰鞋包榜</p>
+        <img src="http://yanxuan.nosdn.127.net/d84c728c164a77a8c5f0ca153d21fe69.png?" alt="热销榜">
+      </li>
+      <li>
+        <p>美食酒水榜</p>
+        <img src="http://yanxuan.nosdn.127.net/59eb7e52ab114c894a8179bc2991122b.png?" alt="热销榜">
+      </li>
+      <li>
+        <p>数码家电榜</p>
+        <img src="http://yanxuan.nosdn.127.net/cf86ce7b36cc90f5c9b1cbbc5eafd737.png?" alt="热销榜">
+      </li>
+      <li>
+        <p>个护清洁榜</p>
+        <img src="http://yanxuan.nosdn.127.net/ae7f88bdae80b15ac656b0c76f356179.jpg?" alt="热销榜">
+      </li>
+      <li>
+        <p>母婴亲子榜</p>
+        <img src="http://yanxuan.nosdn.127.net/873505d4b94744861ba243e321868530.png?" alt="热销榜">
+      </li>
+      <li>
+        <p>运动旅行榜</p>
+        <img src="http://yanxuan.nosdn.127.net/83e9f1b99b484885f88b5c5443f87cec.png?" alt="热销榜">
+      </li>
+      <li>
+        <p>全球特色榜</p>
+        <img src="http://yanxuan.nosdn.127.net/82de8fdea1c8bba21b26099612ff5605.png?" alt="热销榜">
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -37,10 +71,11 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+  @import "../../../../common/stylus/mixins.styl"
   #Hotcategory
     width 100%
-    height 800px
-    background red
+    height 754px
+    background-color #fff
     margin-top 30px
     .HotTitle
       font-size 32px
@@ -54,7 +89,7 @@
       font-size 28px
       color #333333
     .categoryHOT
-      width 340px
+      width 330px
       height 200px
       float left
       background #F9F3E4
@@ -70,7 +105,7 @@
       .HotText
           margin auto 15px
     .categoryGOOD
-      width 340px
+      width 330px
       height 200px
       float right
       background #EBEFF6
@@ -85,4 +120,28 @@
         background-color #000
       .HotText
         margin auto 15px
+  #homeLife
+    width 100%
+    clearFix()
+    display block
+    li
+      float left
+      width 165px
+      height 180px
+      overflow hidden
+      text-align center
+      background #F5F5F5
+      margin-top 20px
+      margin-left 5px
+      &:nth-of-type(1)
+        margin-left 40px
+      &:nth-of-type(5)
+        margin-left 40px
+      p
+        font-size 26px
+        color #333333
+      img
+        width 120px
+        height 120px
+        margin 15px auto
 </style>

@@ -3,18 +3,19 @@ import category from './category'
 import homeData from './homeData'
 import categoryList from './categoryList'
 
-Mock.mock('/category',{
+Mock.mock('/mock/category',{
   code:0,
   data:category
 })
-Mock.mock('/homeData',{
+Mock.mock('/mock/home',{
   code:0,
   data:homeData
 })
-Mock.mock('/categoryList',{
+
+Mock.mock('/mock/categoryList',{
   code:0,
   data:categoryList
 })
 
-console.log('mockserver')
+console.log('mockserverOK')
 

@@ -4,6 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueScroller from 'vue-scroller'
+import store from './store'
+import './mock/mockServer'
+import 'lib-flexible/flexible'
+
+import commonFooter from './components/Footer/commonFooter'
+import commonheader from './components/Header/header'
+Vue.component('commonFooter',commonFooter)
+Vue.component('commonheader',commonheader)
+
 Vue.use(VueScroller)
 Vue.config.productionTip = false
 
@@ -12,5 +21,6 @@ new Vue({
   el: '#app',
   components: { App },
   template: '<App/>',
-  router
+  router,
+  store
 })
