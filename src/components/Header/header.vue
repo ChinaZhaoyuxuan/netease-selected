@@ -7,7 +7,7 @@
       <span >搜索商品, 共22494款好物</span>
     </div>
     <div class="btn">
-      <button>登陆</button>
+      <button @click="$router.push('/personal/login')">登陆</button>
     </div>
   </div>
 </template>

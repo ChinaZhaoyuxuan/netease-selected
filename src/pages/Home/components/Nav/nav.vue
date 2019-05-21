@@ -1,7 +1,7 @@
 <template>
   <div class="warp">
     <ul class="HomeNav">
-      <li>推荐</li>
+      <li class="active">推荐</li>
       <li>居家生活</li>
       <li>服饰鞋包</li>
       <li>美食酒水</li>
@@ -72,6 +72,11 @@
       color: #333;
       background-color: #fff
       padding-bottom 15px
+      li
+        padding-bottom 10px
+      .active
+        color $red
+        border-bottom 3px solid $red
     #toggle
       width 40px
       height 40px

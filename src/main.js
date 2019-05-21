@@ -7,9 +7,14 @@ import VueScroller from 'vue-scroller'
 import store from './store'
 import './mock/mockServer'
 import 'lib-flexible/flexible'
-
 import commonFooter from './components/Footer/commonFooter'
 import commonheader from './components/Header/header'
+import {Button,Field} from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+
+Vue.component(Button.name,Button)
+Vue.component(Field.name, Field);
 Vue.component('commonFooter',commonFooter)
 Vue.component('commonheader',commonheader)
 

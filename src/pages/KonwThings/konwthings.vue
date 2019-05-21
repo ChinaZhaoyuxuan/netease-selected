@@ -1,10 +1,19 @@
 <template>
-<div>KonwThings</div>
+  <div>
+    <KonwthigsHeader/>
+    <router-view/>
+  </div>
+ 
+  
 </template>
 
 <script>
+  import KonwthigsHeader from './KonwthigsHeader/konwthigsheader'
   export default {
-    name: 'konwthings'
+    name: 'konwthings',
+    components:{
+      'KonwthigsHeader':KonwthigsHeader
+    }
   }
 </script>
 
