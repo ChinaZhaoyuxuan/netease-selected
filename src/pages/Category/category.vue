@@ -1,18 +1,19 @@
 <template>
   <div>
-    <div id="headeWrap">
+    <div>
+      <div id="headeWrap">
       <div class="search">
         <i class="iconfont icon-iconfontzhizuobiaozhun22"></i>
         <span >搜索商品, 共22494款好物</span>
       </div>
     </div>
-    <div class="container">
-      <div class="left_nav">
-        <ul >
-          <li v-for="(item,index) in categoryList" :key="index" @click="handle(index)" :class="{active:categoryList[itemindex]===item}">{{item.name}}</li>
-        </ul>
-      </div>
-      <div class="content">
+      <div class="container">
+        <div class="left_nav">
+          <ul >
+            <li v-for="(item,index) in categoryList" :key="index" @click="handle(index)" :class="{active:categoryList[itemindex]===item}">{{item.name}}</li>
+          </ul>
+        </div>
+        <div class="content">
           <div>
             <div v-if="categoryList.length">
               <img :src="categoryList[itemindex].wapBannerUrl"  alt="">
@@ -24,14 +25,18 @@
               </ul>
             </div>
           </div>
+        </div>
       </div>
     </div>
+    <router-view/>
   </div>
+  
 </template>
 
 <script>
   import {mapState} from 'vuex'
   import BScroll from 'better-scroll'
+  import Selecttings from './components/selecttings'
   export default {
     name: "category",
     data(){
@@ -53,6 +58,9 @@
       handle(index){
         this.itemindex = index
       }
+    },
+    components:{
+      'Selecttings':Selecttings
     }
   }
 </script>

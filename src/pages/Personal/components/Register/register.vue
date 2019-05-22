@@ -3,26 +3,36 @@
     <div id="logoWrap">
       手机号注册
     </div>
+    <form>
     <div class="phone_wrap" >
       <div class="phone">
-        <input type="text" placeholder="请输入手机号" >
+        <input type="text" placeholder="请输入手机号" v-validate="{required:true,regex:/^1\d{10}/}" name="phone" v-model="phone" >
       </div>
+      <span style="color:red">{{ errors.first('phone') }}</span>
       <div class="codewrap">
-        <input class="msg-code" type="text" placeholder="请输入短信验证码">
+        <input class="msg-code" type="text" placeholder="请输入短信验证码" v-validate="{required:true|email}" name="短信验证码" v-model="mes" >
         <button class="get_code">获取验证码</button>
       </div>
+      <span style="color:red">{{ errors.first('短信验证码') }}</span>
       <div class="pwd">
-        <input type="password" placeholder="请输入密码" >
+        <input type="password" placeholder="请输入密码" v-validate="{required:true,regex:/\d{10}/}" name="pwd" v-model="pwd">
       </div>
-      <!--<div class="confirm_pwd">-->
-        <!--<input type="password" placeholder="请确认密码" >-->
-      <!--</div>-->
+      <span style="color:red">{{ errors.first('pwd') }}</span>
+      
       <button class="register" >注册</button>
     </div>
+    </form>
   </div>
 </template>
 <script>
   export default {
+    data(){
+      return{
+        phone:'',
+        pwd:'',
+        mes:''
+      }
+    }
   }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
@@ -82,7 +92,7 @@
         outline none
         background-color $red
         border 1px solid $red
-        margin-top 30px
+        margin-top 40px
    
 
 </style>

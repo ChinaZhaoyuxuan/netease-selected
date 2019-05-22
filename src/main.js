@@ -11,6 +11,7 @@ import commonFooter from './components/Footer/commonFooter'
 import commonheader from './components/Header/header'
 import {Button,Field} from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import './validate'
 
 
 Vue.component(Button.name,Button)

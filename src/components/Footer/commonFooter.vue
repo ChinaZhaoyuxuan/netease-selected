@@ -8,7 +8,7 @@
         <div class="footericon"><img src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/tabBar-s43a0dc8a7d-de25ef8e19.png" alt=""></div>
         <span>分类</span>
       </li>
-      <li :class="{active:$route.path==='/konwthings'}" @click="goto('/konwthings')">
+      <li :class="{active:$route.path==='/konwthings/discover'}" @click="goto('/konwthings/discover')">
         <div class="footericon"><img src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/tabBar-s43a0dc8a7d-de25ef8e19.png" alt=""></div>        <span>识物</span>
       </li>
       <li :class="{active:$route.path==='/goshop'}" @click="goto('/goshop')">
@@ -45,6 +45,7 @@
     z-index 99
     background-color #fff
     padding-bottom 10px
+    padding-top 10px
     li
       display flex
       flex-direction column

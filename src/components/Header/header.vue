@@ -2,7 +2,7 @@
   <div id="headeWrap">
     <h1 class="logo">
       <img src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-a90bdaae6b.png" alt=""></h1>
-    <div class="search">
+    <div class="search" @click="$router.push('/category/selecttings')">
       <i class="iconfont icon-iconfontzhizuobiaozhun22"></i>
       <span >搜索商品, 共22494款好物</span>
     </div>

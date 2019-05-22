@@ -67,7 +67,7 @@
   #swiperWrap
     background-color #fff
     .swiper-container
-      width 750px
+      width 100%
       height 400px
       img
         width 100%

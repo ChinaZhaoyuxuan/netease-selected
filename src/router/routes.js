@@ -10,11 +10,19 @@ import PhoneLogin from '../pages/Personal/components/PhoneLogin/phonelogin'
 import EmailLogin from '../pages/Personal/components/EmailLogin/emaillogin'
 import Discover from '../pages/KonwThings/Discover/discover'
 import Choose from '../pages/KonwThings/Choose/choose'
+import  Selecttings from '../pages/Category/components/selecttings'
 export default [
   {
     path: '/category',
     component: Category,
-    meta: {showFooter: true}
+    meta: {showFooter: true},
+    children:[
+      {
+        path:'/category/selecttings',
+        component:Selecttings,
+        meta: {showFooter: false,showHeader: false},
+      }
+    ]
   },
   {
     path: '/home',

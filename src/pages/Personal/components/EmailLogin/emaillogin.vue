@@ -5,10 +5,12 @@
     </div>
     <div class="phone_wrap" >
       <div class="phone">
-        <input type="text" placeholder="邮箱账号" >
+        <input type="text" placeholder="邮箱账号" v-validate="{required:true}" name="短信验证码" v-model="mes">
       </div>
+      <span style="color:red">{{ errors.first('短信验证码') }}</span>
       <div class="codewrap">
-        <input class="msg-code" type="text" placeholder="密码">
+        <input class="msg-code" type="password" placeholder="请输入密码" v-validate="{required:true,regex:'/\\d{10}/'}" name="pwd" v-model="pwd">
+        <span style="color:red">{{ errors.first('pwd') }}</span>
         <button class="get_code">获取验证码</button>
       </div>
       <div class="forget">
@@ -22,6 +24,13 @@
 </template>
 <script>
   export default {
+    name:'',
+    data(){
+      return{
+        mes:'',
+        pwd:'',
+      }
+    }
   }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>

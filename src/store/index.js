@@ -4,6 +4,10 @@ import actions from './actions'
 import getters from './getters'
 import home from './modules/home'
 import category from './modules/category'
+import recommend from './modules/Recommend'
+import searchresult from './modules/searchresult'
+import hotshop from './modules/hotshop'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -11,6 +15,9 @@ export default new Vuex.Store({
   getters,
   modules:{
     home,
-    category
+    category,
+    recommend,
+    searchresult,
+    hotshop
   }
 })

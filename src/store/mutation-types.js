@@ -3,4 +3,6 @@ export const RECEIVE_FLASHSALE = 'receive_flashsale'
 export const RECEIVE_POPULAR = 'receive_popular'
 export const RECEIVE_NEWITEMLIST = 'receive_newitemlist'
 export const RECEIVE_CATEGORYLIST = 'receive_categorylist'
-
+export const RECEIVE_RECOMMENDDATA = 'receive_recommenddata'
+export const RECEIVE_SEARCHRESULT = 'receive_searchresult'
+export const RECEIVE_HOTSHOP='receive_hotshop'

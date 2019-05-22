@@ -5,18 +5,27 @@
     </div>
     <div class="phone_wrap" >
       <div class="phone">
-        <input type="text" placeholder="请输入手机号" >
+        <input type="text" placeholder="请输入手机号" v-validate="{required:true,regex:/^1\d{10}/}" name="phone" v-model="phone"  >
       </div>
+      <span style="color:red">{{ errors.first('phone') }}</span>
       <div class="codewrap">
-        <input class="msg-code" type="text" placeholder="请输入短信验证码">
+        <input class="msg-code" type="text" placeholder="请输入短信验证码" v-validate="{required:true}" name="短信验证码" v-model="mes">
         <button class="get_code">获取验证码</button>
       </div>
+      <span style="color:red">{{ errors.first('短信验证码') }}</span>
       <button class="register" >注册</button>
     </div>
   </div>
 </template>
 <script>
   export default {
+    name:'',
+    data(){
+      return{
+        mes:'',
+        phone:''
+      }
+    }
   }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
